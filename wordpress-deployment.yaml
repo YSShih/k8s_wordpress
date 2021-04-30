@@ -5,8 +5,12 @@ metadata:
   labels:
     app: wordpress
 spec:
+  externalIPs:
+  - 192.168.66.10
   ports:
     - port: 80
+      protocol: TCP
+      targetPort: 80
   selector:
     app: wordpress
     tier: frontend
